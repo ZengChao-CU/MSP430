@@ -17,9 +17,7 @@ in this project ...
 ### 二、开发板介绍
 
 **开发板正面 与背面图**    
-<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E5%BC%80%E5%8F%91%E6%9D%BF%E6%AD%A3%E9%9D%A2.jpg" width=400dp/>                           
-<img src="msp430点灯实验/开发板背面.jpg" style="zoom: 5%;" /> 
-
+<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E5%BC%80%E5%8F%91%E6%9D%BF%E6%AD%A3%E9%9D%A2.jpg" width=200dp />                          <img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E5%BC%80%E5%8F%91%E6%9D%BF%E8%83%8C%E9%9D%A2.jpg" width=200dp /> 
 
 
 #### **1、 I/O** **的简介**
@@ -50,7 +48,7 @@ P1DIR |=(BIT1+BIT2); //等价于 PADIR |=（BIT1+BIT2）或  PADIR_L |=（BIT1+B
 
 **注意：在msp430f5529.h的头文件中BITS有如下定义：**
 
-<img src="msp430点灯实验/BITx所在头文件.png" style="zoom:60%; " />
+<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/BITx%E6%89%80%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6.png" width=400dp />
 
 **(3)、I/O 输入设定寄存器 PXIN**
 
@@ -78,7 +76,7 @@ P1IN &= ~(BIT1+BIT2);
 
 ### 三、原理图(只涉及本实验的)
 
-<img src="msp430点灯实验/LED原理图.png" style="zoom:150%;" />
+<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/LED%E5%8E%9F%E7%90%86%E5%9B%BE.png" width=400dp />
 
 **由原理图可知，本实验应该设置P1.0和P4.7引脚为通用I/O,并且方向为输出方向，当P1.0和P4.7引脚为高电平时LED1和LED2点亮，为低电平时LED1和LED2熄灭。**
 
