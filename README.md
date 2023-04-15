@@ -17,8 +17,7 @@ in this project ...
 ### 二、开发板介绍
 
 **开发板正面 与背面图**    
-![contents](./contents.png)
-<img src="msp430点灯实验/开发板正面.jpg" style="zoom: 5%;float:left" />                           
+<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E5%BC%80%E5%8F%91%E6%9D%BF%E6%AD%A3%E9%9D%A2.jpg" width=400dp/>                           
 <img src="msp430点灯实验/开发板背面.jpg" style="zoom: 5%;" /> 
 
 
