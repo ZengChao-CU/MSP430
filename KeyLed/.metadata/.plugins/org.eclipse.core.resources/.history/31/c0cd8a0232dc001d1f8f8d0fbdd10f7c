@@ -1,0 +1,24 @@
+#include <msp430.h> 
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// 关闭看门狗
+
+	P1DIR |= BIT0;       //将P1.0设为输出模式
+
+	P1OUT |= ~BIT0;     //初始化为灭
+
+	P1DIR &= ~BIT1;      //将P1.1设为输入模式
+
+
+    while (1)
+    {
+     if(P1IN & BIT1){
+         P1OUT |= BIT0;
+     }
+     else{
+         P1OUT &= ~BIT0;
+     }
+    }
+	//return 0;
+}

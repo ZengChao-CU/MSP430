@@ -1,10 +1,26 @@
 # MSP430
+- [MSP430](#msp430)
+  - [一、（LED交替闪烁）The LEDs flash alternately](#一led交替闪烁the-leds-flash-alternately)
+    - [(一)、实验内容](#一实验内容)
+    - [(二)、开发板介绍](#二开发板介绍)
+      - [**1、 I/O** **的简介**](#1-io-的简介)
+      - [**2、I/O 的简单配置**](#2io-的简单配置)
+    - [(三)、原理图(只涉及本实验的)](#三原理图只涉及本实验的)
+    - [(四)、代码部分](#四代码部分)
+    - [(五)、实验现象](#五实验现象)
+  - [二、（按键控制LED）Press the key to control the LED](#二按键控制ledpress-the-key-to-control-the-led)
+    - [（一）、实验内容](#一实验内容-1)
+    - [（二）、原理图及涉及到的寄存器](#二原理图及涉及到的寄存器)
+    - [（三）、代码部分](#三代码部分)
+    - [（四）、实验现象](#四实验现象)
+
+
 msp430f5529 study 
 
-## LED
-in this project ...
+## 一、（LED交替闪烁）The LEDs flash alternately
 
-### 一、实验内容
+
+### (一)、实验内容
 
 **使用开发板：msp430f5529**
 
@@ -14,7 +30,7 @@ in this project ...
 
 **通过ccs编写代码，控制LED1和LED2交替闪烁**
 
-### 二、开发板介绍
+### (二)、开发板介绍
 
 **开发板正面 与背面图**    
 <img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E5%BC%80%E5%8F%91%E6%9D%BF%E6%AD%A3%E9%9D%A2.jpg" width=200dp />                          <img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E5%BC%80%E5%8F%91%E6%9D%BF%E8%83%8C%E9%9D%A2.jpg" width=200dp /> 
@@ -74,13 +90,13 @@ P1IN &= ~(BIT1+BIT2);
 
 **低电平表示该寄存器为无效状态； 高电平表示该寄存器为有效状态；**
 
-### 三、原理图(只涉及本实验的)
+### (三)、原理图(只涉及本实验的)
 
 <img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/LED%E5%8E%9F%E7%90%86%E5%9B%BE.png" width=400dp />
 
 **由原理图可知，本实验应该设置P1.0和P4.7引脚为通用I/O,并且方向为输出方向，当P1.0和P4.7引脚为高电平时LED1和LED2点亮，为低电平时LED1和LED2熄灭。**
 
-### 四、代码部分
+### (四)、代码部分
 
 **main.c**
 
@@ -161,9 +177,86 @@ void LED_Init(void)//led初始化函数
 
 ```
 
-###  五、实验现象
+###  (五)、实验现象
 
 [**点击跳转**](https://live.csdn.net/v/290512 )
 
 
+## 二、（按键控制LED）Press the key to control the LED
 
+### （一）、实验内容
+
+**使用的开发板：msp430f5529。**
+
+**使用的LED灯：为开发板上自带的User LEDs(LED1:P1.0)。**
+
+**使用的按键：开发板自带的按键2（s2:P1.1）。**
+
+**环境：CCS     (Version: 12.2.0.00009)。** 
+
+**通过ccs编写代码，利用按键控制LED1亮灭。**
+
+### （二）、原理图及涉及到的寄存器
+
+**原理图：**
+
+
+**涉及到的寄存器：P1SEL、P1DIR、P1OUT、P1IN、P1REN。**
+
+**具体不做说明，在LED闪烁实验中有所介绍。**
+
+### （三）、代码部分
+
+**main.c**
+
+```c
+#include <msp430.h> 
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// 关闭看门狗
+
+    P1SEL &= ~(BIT0+BIT1); //将P1.0 P1.1设置为通用I/O
+	P1DIR |= BIT0;       //将P1.0设为输出模式
+	P1OUT &= ~BIT0;     //初始化为灭
+	P1DIR &= ~BIT1;      //将P1.1设为输入模式
+
+	P1REN |= BIT1;       //使能上拉
+	P1OUT |= BIT1;
+
+    while (1)
+    {
+        if(P1IN & BIT1){  //高电平表示未被按下
+            P1OUT &= ~BIT0; //熄灭
+        }
+        else{
+            P1OUT |= BIT0;//点亮
+        }
+
+    }
+	//return 0;
+}
+```
+
+***关键部分***
+
+```c
+    P1REN |= BIT1;       //使能上拉
+	P1OUT |= BIT1;
+```
+
+**将P1.1设置为上拉模式，P1.1默认状态为高电平。**
+
+**当检测到P1.1为高电平时，表示按键未按下，P1.0熄灭；**
+**当检测到P1.1为低电平时，表示按键按下，P1.0点亮。**
+
+```c
+if(P1IN & BIT1){...}
+else{...}
+```
+
+**P1IN&BIT1:对按键按下情况进行检测.**
+
+### （四）、实验现象
+
+[**点击跳转**]( )
