@@ -1,7 +1,7 @@
 # MSP430
 msp430f5529 study 
 - [MSP430f5529](#msp430f5529)
-  - [一、（LED交替闪烁）The LEDs flash alternately](#一led交替闪烁the-leds-flash-alternately)
+  - [一、LED交替闪烁（The LEDs flash alternately）](#一led交替闪烁the-leds-flash-alternately)
     - [(一)、实验内容](#一实验内容)
     - [(二)、开发板介绍](#二开发板介绍)
       - [**1、 I/O** **的简介**](#1-io-的简介)
@@ -9,7 +9,7 @@ msp430f5529 study
     - [(三)、原理图(只涉及本实验的)](#三原理图只涉及本实验的)
     - [(四)、代码部分](#四代码部分)
     - [(五)、实验现象](#五实验现象)
-  - [二、（按键控制LED）Press the key to control the LED](#二按键控制ledpress-the-key-to-control-the-led)
+  - [二、按键控制LED（Press the key to control the LED）](#二按键控制ledpress-the-key-to-control-the-led)
     - [（一）、实验内容](#一实验内容-1)
     - [（二）、原理图及涉及到的寄存器](#二原理图及涉及到的寄存器)
     - [（三）、代码部分](#三代码部分)
