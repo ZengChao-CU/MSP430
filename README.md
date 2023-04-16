@@ -1,5 +1,6 @@
 # MSP430
-- [MSP430](#msp430)
+msp430f5529 study 
+- [MSP430f5529](#msp430f5529)
   - [一、（LED交替闪烁）The LEDs flash alternately](#一led交替闪烁the-leds-flash-alternately)
     - [(一)、实验内容](#一实验内容)
     - [(二)、开发板介绍](#二开发板介绍)
@@ -14,8 +15,6 @@
     - [（三）、代码部分](#三代码部分)
     - [（四）、实验现象](#四实验现象)
 
-
-msp430f5529 study 
 
 ## 一、（LED交替闪烁）The LEDs flash alternately
 
@@ -34,7 +33,6 @@ msp430f5529 study
 
 **开发板正面 与背面图**    
 <img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E5%BC%80%E5%8F%91%E6%9D%BF%E6%AD%A3%E9%9D%A2.jpg" width=200dp />                          <img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E5%BC%80%E5%8F%91%E6%9D%BF%E8%83%8C%E9%9D%A2.jpg" width=200dp /> 
-
 
 #### **1、 I/O** **的简介**
 
@@ -181,7 +179,7 @@ void LED_Init(void)//led初始化函数
 
 [**点击跳转**](https://live.csdn.net/v/290512 )
 
-
+***
 ## 二、（按键控制LED）Press the key to control the LED
 
 ### （一）、实验内容
@@ -199,7 +197,7 @@ void LED_Init(void)//led初始化函数
 ### （二）、原理图及涉及到的寄存器
 
 **原理图：**
-
+<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E4%BA%8C%E5%8E%9F%E7%90%86%E5%9B%BE.png" width=400dp />
 
 **涉及到的寄存器：P1SEL、P1DIR、P1OUT、P1IN、P1REN。**
 
@@ -259,4 +257,5 @@ else{...}
 
 ### （四）、实验现象
 
-[**点击跳转**]( )
+[**点击跳转**](https://live.csdn.net/v/290614)
+***
