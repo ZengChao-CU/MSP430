@@ -293,7 +293,7 @@ else{...}
 **通过ccs编写代码，利用按键控制LED灯依次循环点亮**
 
 **相关图片**
-<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E4%BA%8C%E5%8E%9F%E7%90%86%E5%9B%BE.png" width=400dp />
+<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/ExternalInterruptLed1.jpg" width=200dp />
 
 <img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E4%BA%8C%E5%8E%9F%E7%90%86%E5%9B%BE.png" width=400dp />
 
