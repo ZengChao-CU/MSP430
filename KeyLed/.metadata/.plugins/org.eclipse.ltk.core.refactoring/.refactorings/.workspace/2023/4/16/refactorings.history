@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;led&apos; to &apos;KeyLed&apos;" description="Rename resource &apos;led&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/led" name="KeyLed" stamp="1681633653706" updateReferences="true"/>
-</session>
