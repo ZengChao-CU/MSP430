@@ -262,7 +262,7 @@ else{...}
 
 ### （四）、实验现象
 
-[**点击跳转**](https://live.csdn.net/v/290614)
+[**点击跳转**](https://live.csdn.net/v/291104)
 ***
 
 
@@ -289,13 +289,14 @@ else{...}
     LED3 ——> P1.4
     
     LED4 ——> P1.5
+    
+    单片机GND ——> 面包板'-'
 
 **通过ccs编写代码，利用按键控制LED灯依次循环点亮**
 
 **相关图片**
-<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/ExternalInterruptLed1.jpg" width=200dp />
 
-<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/%E4%BA%8C%E5%8E%9F%E7%90%86%E5%9B%BE.png" width=400dp />
+<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/ExternalInterruptLed1.jpg" width=200dp />&nbsp;&nbsp;<img src="https://github.com/ZengChao-CU/MSP430/blob/master/msp430LEDImag/ExternalInterruptLed2.jpg" width=200dp />
 
 ### (二)、相关寄存器及相关说明
 
@@ -456,5 +457,5 @@ __interrupt void Port2_ISR(void){
 
 ### （四）、实验现象
 
-[**点击跳转**](https://live.csdn.net/v/290614)
+[**点击跳转**](https://live.csdn.net/v/291102)
 ***
