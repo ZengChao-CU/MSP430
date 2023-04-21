@@ -1,0 +1,30 @@
+#include <msp430f5529.h>
+#include <HARDWARE/delay.h>
+// *************************************************************
+// 主程序
+// *************************************************************
+//在P1.3产生pwm波
+
+void main(void)
+{
+
+  WDTCTL = WDTPW + WDTHOLD;   // 关闭看门狗
+  unsigned int count=0;
+  P2DIR |= BIT3;    //
+
+  TA1CTL = TASSEL_2 + MC_2;
+
+  while(1){
+      if(TA1CTL & TAIFG){
+          count++;
+          TA1CTL &= ~TAIFG;
+          if(count==20){
+              P2OUT ^= BIT3;
+              count=0;
+          }
+      }
+  }
+
+
+}
+

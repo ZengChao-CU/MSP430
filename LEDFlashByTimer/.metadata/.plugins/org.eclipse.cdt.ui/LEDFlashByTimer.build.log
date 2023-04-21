@@ -1,0 +1,23 @@
+
+**** Build of configuration Debug for project LEDFlashByTimer ****
+
+"D:\\CCS_Softeware\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"D:/CCS_Softeware/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/CCS_Softeware/ccs/ccs_base/msp430/include" --include_path="E:/MSP430Practice/BreathingLights_2/LEDFlashByTimer" --include_path="D:/CCS_Softeware/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power=all --define=__MSP430F5529__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "LEDFlashByTimer.out"
+Invoking: MSP430 Linker
+"D:/CCS_Softeware/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --define=__MSP430F5529__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 -z -m"LEDFlashByTimer.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/CCS_Softeware/ccs/ccs_base/msp430/include" -i"D:/CCS_Softeware/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/CCS_Softeware/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"D:/CCS_Softeware/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="LEDFlashByTimer_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "LEDFlashByTimer.out" "./main.obj" "../lnk_msp430f5529.cmd"  -llibmath.a -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "LEDFlashByTimer.out"
+ 
+
+**** Build Finished ****
