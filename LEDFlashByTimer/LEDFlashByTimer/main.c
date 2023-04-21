@@ -18,7 +18,7 @@ void main(void)
       if(TA1CTL & TAIFG){//检测是否有中断事件
           count++;
           TA1CTL &= ~TAIFG;//标志位清零
-          if(count==15){//默认情况下DCO为1MHz, 65536ms中断发生一次。1s大约需要15次
+          if(count==15){//默认情况下DCO为1MHz, 65.536ms中断发生一次。1s大约需要15次
               P2OUT ^= BIT3;//翻转
               count=0;
           }
