@@ -2,4 +2,4 @@
 *.js linguist-language=c
 *.css linguist-language=c
 *.html linguist-language=c
-*.* linguist-language=c
+# *.* linguist-language=c
