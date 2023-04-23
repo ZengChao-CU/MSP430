@@ -1,0 +1,28 @@
+#include <msp430f5529.h>
+#include <HARDWARE/delay.h>
+// *************************************************************
+// 主程序
+// *************************************************************
+//在P1.3产生pwm波
+
+void main(void)
+{
+  unsigned int PWMPeriod = 100; //设置PWM周期
+  unsigned int i;
+  WDTCTL = WDTPW + WDTHOLD;   // 关闭看门狗
+
+  P2SEL |= BIT4;
+  P2DIR |= BIT4;
+
+
+  TA2CCR0 = PWMPeriod;
+  TA2CTL = TA0SSEL_2 + MC_2;
+  TA2CCTL1 = OUTMOD_7;
+
+  while(1){
+      for(i=0;i<PWMPeriod;i+=5) TA2CCR1=i;
+      for(i=PWMPeriod;i>=0;i--) TA2CCR1=i;
+  }
+
+}
+
